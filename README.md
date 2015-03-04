@@ -3,14 +3,17 @@ Fipsified VLD (Visual Leak Detector)
 
 https://github.com/KindDragon/vld
 
-**Work In Progress**
+**This is work in progress!**
 
 ### How to use:
 
 Only works on Windows (the import will be ignored when compiling for
 other platforms).
 
-#### Add fips-vld as import to your fips.yml file:
+First make sure to update fips itself (the feature to detect 
+custom build configs in imported project is new)!
+
+Add fips-vld as import to your project's fips.yml file:
 
 ```yaml
 imports:
@@ -18,13 +21,13 @@ imports:
         git: https://github.com/floooh/fips-vld.git
 ```
 
-#### Run 'fips fetch' to fetch fips-vld from github:
+Run 'fips fetch' to fetch fips-vld from github:
 
 ```bash
 > fips fetch
 ```
 
-#### Compile with one of \*-vld build configs:
+Compile with one of the provided \*-vld build configs:
 
 ```bash
 # 32-bit Windows:
