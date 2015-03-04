@@ -1,0 +1,3 @@
+[submodule "vld"]
+	path = vld
+	url = git@github.com:KindDragon/vld.git
