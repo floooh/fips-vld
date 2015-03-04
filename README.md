@@ -40,3 +40,12 @@ Compile with one of the provided \*-vld build configs:
 You also need to integrate VLD into your project's source code
 (see VLD docs: https://vld.codeplex.com/documentation).
 
+You can check in your CMakeLists.txt files whether fips-vld is activated
+with **if (FIPS\_USE\_VLD)**, use this to set a preprocessor define,
+for instance the Oryol 3D engine has this in its fips-include.cmake file:
+
+```cmake
+if (FIPS_USE_VLD)
+    add_definitions(-DORYOL_USE_VLD=1)
+endif()
+```

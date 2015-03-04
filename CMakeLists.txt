@@ -1,6 +1,7 @@
 #
 # project: fips-vld
 #
+
 if (NOT FIPS_IMPORT)
     cmake_minimum_required(VERSION 2.8)
     get_filename_component(FIPS_ROOT_DIR "../fips" ABSOLUTE)
@@ -13,7 +14,7 @@ else()
 endif()
 
 if (FIPS_WINDOWS AND FIPS_MSVC AND FIPS_USE_VLD)
-    fips_begin_lib(vld)
+    fips_begin_sharedlib(vld)
         include_directories(vld vld/lib/dbghelp/include vld/setup)
         add_definitions(-D_UNICODE -DUNICODE)
         add_definitions(-D_WIN32_WINNT=0x0502)
@@ -46,7 +47,8 @@ if (FIPS_WINDOWS AND FIPS_MSVC AND FIPS_USE_VLD)
             vldheap.cpp)
         fips_dir(vld/setup)
         fips_files(version.h)
-    fips_end_lib()
+        fips_deps(psapi.lib)
+    fips_end_sharedlib()
     # disable some warnings
     set_target_properties(vld PROPERTIES COMPILE_FLAGS "/wd4201 /wd4229")
 endif()
