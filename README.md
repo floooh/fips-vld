@@ -51,7 +51,7 @@ is set:
 In the CMakeLists.txt file of the source file's module (in Oryol's case: the 
 Core module) define a library dependency to **vld**. Every app which uses the
 Core module will now also link automatically against VLD. Also, an extra target dependency
-must be defined to trogger fips-vld's special target **vld\_copy\_dlls** (this is explained
+must be defined to trigger fips-vld's special target **vld\_copy\_dlls** (this is explained
 further down):
 
 ```cmake
