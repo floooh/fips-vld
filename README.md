@@ -2,17 +2,18 @@
 Fipsified VLD (Visual Leak Detector)
 
 VLD: https://github.com/KindDragon/vld
+
 fips: https://github.com/floooh/fips
-
-### How to use:
-
-#### Importing into your fips project:
 
 Only works on Windows (the import will be ignored when compiling for
 other platforms).
 
+### How to use:
+
 First make sure to update fips itself (the feature to detect 
 custom build configs in imported project is new)!
+
+#### Importing into your fips project:
 
 Add fips-vld as import to your project's fips.yml file:
 
@@ -27,7 +28,7 @@ Run 'fips fetch' to fetch fips-vld from github:
 #### Integrating VLD into your project:
 
 In your toplevel CMakeLists.txt or fips-include.cmake file, check for the 
-FIPS\_USE\_VLD, and if this is set, define a C preprocessor macro of your
+FIPS\_USE\_VLD, and if this is set, setup a C preprocessor define of your
 choice, for instance in the Oryol 3D engine:
 
 ```cmake
