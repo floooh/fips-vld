@@ -68,7 +68,7 @@ endif()
 ```
 
 That's all for preparations, now build with one of the the 
-fips-vld custom-config **win32-vstudio-vld** or **win64-vstudio-vld** 
+fips-vld custom-configs **win32-vstudio-vld** or **win64-vstudio-vld** 
 inside Visual Studio:
 
 ```bash
