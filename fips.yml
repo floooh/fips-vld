@@ -3,7 +3,7 @@
 #
 ---
 exports:
-    header-dirs: [ vld ]
+    header-dirs: [ . ]
     modules:
         vld: .
 
